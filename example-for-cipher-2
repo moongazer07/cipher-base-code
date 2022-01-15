@@ -1,0 +1,51 @@
+#User inputs text and example cipher is returned.
+#example chipher encoder
+#moongazer07
+
+def encodeUserMsg(userInput):
+    msg = ""
+    CIPHERbet = {
+                'A' : "11",
+                'B' : "12",
+                'C' : "13",
+                'D' : "14",
+                'E' : "15",
+                'F' : "16",
+                'G' : "17",
+                'H' : "18",
+                'I' : "19",
+                'J' : "20",
+                'K' : "21",
+                'L' : "22",
+                'M' : "23",
+                'N' : "24",
+                'O' : "25",
+                'P' : "26",
+                'Q' : "27",
+                'R' : "28",
+                'S' : "29",
+                'T' : "30",
+                'U' : "31",
+                'V' : "32",
+                'W' : "33",
+                'X' : "34",
+                'Y' : "35",
+                'Z' : "36",
+                ' ' : "366",
+                }
+    for ittr in range(len(userInput)):
+        if(userInput[ittr].isalpha() or userInput[ittr] == ' '):
+            msg += (CIPHERbet[userInput[ittr]])
+    print(msg+"\n=")
+
+
+
+print('cipher')
+userInput = input("Please enter text to protect: ")
+encodeUserMsg(userInput.upper())
+
+while True:
+    userInput = input("Would you like to continue? press Enter without typing anything to quit or type text and press enter to continue: ")
+    if (userInput == ''):
+        break
+    encodeUserMsg(userInput.upper())
